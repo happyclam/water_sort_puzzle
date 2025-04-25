@@ -44,10 +44,11 @@ def bfs(node)
           p "cnt = #{cnt}"
           p "Complete!!"
           result = temp
-          # return temp
+          break
         end
         queue.push(temp.dup)
       }
+      break if result.class.name == "Box"      
     }
     break if result.class.name == "Box"
   end
