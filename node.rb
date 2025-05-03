@@ -11,6 +11,9 @@ class Node
     @value = box
     @child = []
   end
+  def self.counter
+    @@counter
+  end
   def self.duplication
     @@duplication
   end
@@ -20,7 +23,8 @@ class Node
   def self.set_dup(hash)
     @@duplication.push(hash)
   end
-  def self.init_dup
+  def self.init
+    @@counter = 0
     @@duplication.clear
   end
   def self.make_hash(box)
