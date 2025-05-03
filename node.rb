@@ -67,7 +67,7 @@ class Node
           c.child.push(nd)
           ret = true
         else
-          ret = c.add(nd, target)
+          ret = c.replace(nd, target)
         end
         break if ret
       }
