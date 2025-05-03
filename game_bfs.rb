@@ -74,6 +74,7 @@ end
 #   ]
 # )
 # 経過時間: ???
+
 # 手詰まりパターン
 # box = Box.new(
 #   [
@@ -93,6 +94,8 @@ end
 #     Bottle.new([AQUA_GREEN, AQUA_GREEN, AQUA_GREEN])
 #   ]
 # )
+# "解無し？"
+
 # 途中から完成パターン
 # box = Box.new(
 #   [
@@ -110,6 +113,9 @@ end
 #     Bottle.new([SKY_BLUE, SKY_BLUE, SKY_BLUE])
 #   ]
 # )
+# 手数: 25手
+# 経過時間: 224.960140466秒
+
 # box = Box.new(
 #   [
 #     Bottle.new([PINK, YELLOW_GREEN, GRAY, PINK]),
@@ -123,6 +129,9 @@ end
 #     Bottle.new
 #   ]
 # )
+# 手数: 22手
+# 経過時間: 13428.173523826秒
+
 # box = Box.new(
 #   [
 #     Bottle.new([ORANGE, RED, YELLOW_GREEN, BLUE]),
@@ -134,6 +143,9 @@ end
 #     Bottle.new
 #   ]
 # )
+# 手数: 15手
+# 経過時間: 31.279772999秒
+
 box = Box.new(
   [
     Bottle.new([ORANGE, RED, ORANGE, RED]),
@@ -143,6 +155,9 @@ box = Box.new(
     Bottle.new
   ]
 )
+# 手数: 8手
+# 経過時間: 0.077888268秒
+
 Node.init
 box.display
 node = Node.new(box)

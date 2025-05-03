@@ -32,7 +32,7 @@ def dfs(node, box, depth)
       else
         Node.set_dup(md5hash)
       end
-      # DFSの場合はaddではなくreplace（置き換え）でいいはず
+      # DFSの場合はaddではなくreplace（置き換え）でいいはず、addでも結果は得られるけど…。
       ret = node.replace(Node.new(temp), box)
       unless ret
         p "Error"
@@ -64,7 +64,9 @@ end
 #       Bottle.new
 #   ]
 # )
-# 経過時間: 0.017664071秒
+# 手数: 46手
+# 経過時間: 0.01530837秒
+
 # 手詰まりパターン
 # box = Box.new(
 #   [
@@ -84,6 +86,8 @@ end
 #     Bottle.new([AQUA_GREEN, AQUA_GREEN, AQUA_GREEN])
 #   ]
 # )
+# "解無し？あるいは読む深さが足りません"
+
 # 途中から完成パターン
 # box = Box.new(
 #   [
@@ -101,6 +105,9 @@ end
 #     Bottle.new([SKY_BLUE, SKY_BLUE, SKY_BLUE])
 #   ]
 # )
+# 手数: 33手
+# 経過時間: 0.302961094秒
+
 # box = Box.new(
 #   [
 #     Bottle.new([PINK, YELLOW_GREEN, GRAY, PINK]),
@@ -114,6 +121,9 @@ end
 #     Bottle.new
 #   ]
 # )
+# 手数: 29手
+# 経過時間: 0.00499378秒
+
 # box = Box.new(
 #   [
 #     Bottle.new([ORANGE, RED, YELLOW_GREEN, BLUE]),
@@ -125,6 +135,9 @@ end
 #     Bottle.new
 #   ]
 # )
+# 手数: 21手
+# 経過時間: 0.004331723秒
+
 box = Box.new(
   [
     Bottle.new([ORANGE, RED, ORANGE, RED]),
@@ -134,6 +147,9 @@ box = Box.new(
     Bottle.new
   ]
 )
+# 手数: 13手
+# 経過時間: 0.001156548秒
+
 Node.init
 box.display
 node = Node.new(box)
