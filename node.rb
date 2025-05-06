@@ -33,8 +33,7 @@ class Node
       rec.push(b)
     }
     md5 = Digest::MD5.new
-    return md5.update(rec.sort_by{|r| r.name}.to_s).to_s
-    # return rec.sort_by{|r| r.name}
+    return md5.update(rec.sort_by{|r| r.to_s}.to_s).to_s
   end
   def add(nd, target)
     ret = false

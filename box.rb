@@ -8,19 +8,14 @@ class Box
   attr_accessor :bottles
   def initialize(bottles)
     @bottles = bottles.dup
-    @bottles.each_with_index{|b, i|
-      b.name = i.to_s
-    }
   end
   def deepCopy
-    # member = @bottles.map(&:dup)
     member = []
     @bottles.each{|b|
       member.push(Bottle.new(b))
     }
     temp = Box.new(member)
     temp.bottles.each_with_index{|t, i|
-      t.name = @bottles[i].name
       t.complete = @bottles[i].complete
     }
     return temp

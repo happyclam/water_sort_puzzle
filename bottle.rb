@@ -3,13 +3,10 @@ require "./const.rb"
 class Bottle < Array
   def initialize(*args, &block)
     super(*args, &block)
-    # 空のボトルが２つあるのでソート用の要素（name）を追加
-    # 安定なソートアルゴリズムに変えてもダメだった
-    @name = ""
     # 一度色が揃ったボトルは動かさないようにするため
     @complete = false
   end
-  attr_accessor :name, :complete
+  attr_accessor :complete
   def pour(bottle)
     org = self.last
     begin
