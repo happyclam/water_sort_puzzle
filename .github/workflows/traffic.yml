@@ -1,5 +1,8 @@
-contents: write
 name: Save Traffic Stats with Graphs
+
+permissions:
+  contents: write
+  metadata: read
 
 on:
   schedule:
